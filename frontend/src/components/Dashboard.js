@@ -132,7 +132,7 @@ if (loading)
                     className="bg-purple-500 px-3 py-1 text-black rounded-lg hover:bg-purple-600 transition shadow-sm"
                     onClick={() =>
                       window.open(
-                        `http://localhost:3001/${link.code}`,
+                        `https://tinylink-backend-zchq.onrender.com/${link.code}`,
                         "_blank"
                       )
                     }
@@ -165,4 +165,5 @@ if (loading)
 }
 
 export default Dashboard;
+
 
