@@ -14,7 +14,7 @@ function Dashboard() {
 
   const fetchLinks = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/api/links");
+      const res = await axios.get("https://tinylink-backend-zchq.onrender.com/api/links");
       setLinks(res.data);
     } catch (error) {
       console.error("Error loading links", error);
@@ -27,7 +27,7 @@ function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this link?")) return;
 
     try {
-      await axios.delete(`http://localhost:3001/api/links/${code}`);
+      await axios.delete(`https://tinylink-backend-zchq.onrender.com/api/links/${code}`);
       fetchLinks();
     } catch (error) {
       console.error("Delete Error:", error);
@@ -165,3 +165,4 @@ if (loading)
 }
 
 export default Dashboard;
+
