@@ -12,7 +12,7 @@ function LinkForm({ onAdd }) {
     setMessage({});
 
     try {
-      await axios.post("http://localhost:3001/api/links", { url, code });
+      await axios.post("https://tinylink-backend-zchq.onrender.com/api/links", { url, code });
       setMessage({ type: "success", text: "Link Created Successfully!" });
       setUrl("");
       setCode("");
@@ -77,3 +77,4 @@ function LinkForm({ onAdd }) {
 }
 
 export default LinkForm;
+
