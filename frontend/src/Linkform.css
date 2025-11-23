@@ -1,0 +1,99 @@
+/* ---------- Card Wrapper ---------- */
+.link-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  max-width: 650px;
+  margin: 20px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+}
+
+.link-card:hover {
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+/* ---------- Title ---------- */
+.link-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 18px;
+}
+
+/* ---------- Form ---------- */
+.link-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- Labels ---------- */
+.link-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ---------- Inputs ---------- */
+.link-input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.link-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+/* ---------- Submit Button ---------- */
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: #1e4fd6;
+}
+
+/* ---------- Messages ---------- */
+.message {
+  margin-top: 16px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.message.error {
+  color: #dc2626;
+}
+
+.message.success {
+  color: #16a34a;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .link-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

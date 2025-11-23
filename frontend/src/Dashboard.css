@@ -1,0 +1,208 @@
+/* Dashboard.css */
+
+/* General Page Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+.text-center h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.text-center p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Button Styling */
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+thead th {
+  text-align: left;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+tbody td {
+  padding: 1rem;
+  color: #111827;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Truncate long URLs */
+/* td.max-w-[280px] {
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3b82f6;
+} */
+
+/* Buttons inside table */
+td button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Copy Button */
+.bg-green-500 {
+  background-color: #22c55e;
+  color: white;
+}
+.bg-green-500:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* Stats Button */
+.bg-blue-500 {
+  background-color: #3b82f6;
+  color: white;
+}
+.bg-blue-500:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Visit Button */
+.bg-purple-500 {
+  background-color: #8b5cf6;
+  color: white;
+}
+.bg-purple-500:hover {
+  background-color: #7c3aed;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.bg-red-500 {
+  background-color: #ef4444;
+  color: white;
+}
+.bg-red-500:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Flex for action buttons */
+td.flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Last clicked date alignment */
+td.text-right {
+  text-align: right;
+  color: #6b7280;
+}
+
+/* Empty Table Message */
+p.text-center {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  td, th {
+    padding: 0.75rem;
+  }
+
+  .text-center h1 {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/* Pulse animation for loading */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column; /* Stack spinner and text vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px; /* Space between spinner and text */
+}
+
+.loader-text {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

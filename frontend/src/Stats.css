@@ -1,0 +1,171 @@
+/* Stats.css */
+
+/* Container */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 80vh;
+  background: #f9fafb; /* Light gray background */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card */
+.stats-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.stats-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827; /* Dark gray */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-primary {
+  color: #3b82f6; /* Blue color for code */
+}
+
+/* Stats items */
+.stats-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.stats-item:last-child {
+  border-bottom: none;
+}
+
+/* Labels */
+.stats-label {
+  font-weight: 600;
+  color: #6b7280; /* Medium gray */
+}
+
+/* Values */
+.stats-value {
+  font-weight: 500;
+  color: #111827;
+  text-align: right;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Loading and Error Text */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #6b7280;
+  padding: 2rem;
+  animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .stats-card {
+    padding: 1.5rem;
+  }
+
+  .stats-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .stats-value {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.65rem 1rem;
+  }
+}
+/* Loader container to center spinner */
+.loader-container {
+  display: flex;
+  flex-direction: column; /* Stack spinner and text vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px; /* Space between spinner and text */
+}
+
+.loader-text {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Simple underline for the label text (optional) */
+.stats-title span {
+    text-decoration: underline; /* simple underline for "Stats for :-" */
+}
+
+
