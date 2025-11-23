@@ -12,7 +12,7 @@ function Stats() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3001/api/links/${code}/stats`) // fetch stats without incrementing clicks
+      .get(`https://tinylink-backend-zchq.onrender.com/api/links/${code}/stats`) // fetch stats without incrementing clicks
       .then((res) => {
         setLink(res.data);
         setLoading(false);
@@ -74,3 +74,4 @@ function Stats() {
 }
 
 export default Stats;
+
